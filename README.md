@@ -1,13 +1,13 @@
 #=======================================================================#
 #                             IOA31000                                  #
-# Script  : beef_strike                             		                #
+# Script  : beef_strike                             		        #
 # Date    : 16/11/2017                                                  #
 # Author  : Tito                                                        #
 # Version : v0.1                                                        #
 # License : GNU General Public License v3.0                             #
 # Distrib : Kali-Linux 2017.2 amd64                                     #
-# Session : root  			      	                                  			#
-# Site Web: https://www.ioa31000.com	                	                #
+# Session : root  			      	               		#
+# Site Web: https://www.ioa31000.com	                	        #
 # YouTube : https://www.youtube.com/user/IOA32000/playlists             #
 # Discord : https://discordapp.com/invite/cyBjPjN                       #
 #                                                                       #
@@ -27,9 +27,7 @@ DANS LE FICHIER QUI VAS S'OUVRIR MODIFIER LA LIGNE 156 COMME CECI :
 			metasploit:
 			        enable: true
 		        
-VOUS POUVEZ MODIFIER VOTRE ID ET MDP BEEF A LA LIGNE 113 ET 114
-			
-			leafpad /etc/beef-xss/config.yaml
+DANS LE FICHIER /etc/beef-xss/config.yam MODIFIER VOTRE ID ET MDP BEEF A LA LIGNE 113 ET 114
 		
 			sed -i 's/localhost/127.0.0.1/g' /usr/share/beef-xss/extensions/metasploit/config.yaml
 			sed -i 's/auto_msfrpcd: false/auto_msfrpcd: true/g' /usr/share/beef-xss/extensions/metasploit/config.yaml
@@ -44,10 +42,9 @@ VOUS POUVEZ MODIFIER VOTRE ID ET MDP BEEF A LA LIGNE 113 ET 114
 			rm -f /usr/bin/beef-xss
 
 DANS LE FICHIER /etc/beef-xss/config.yaml MODIFIER LE PORT A LA LIGNE 58 COMME CECI :
+(VOUS POUVEZ MODIFIER VOTRE ID ET MDP BEEF A LA LIGNE 59 ET 60)
 
 		        http://127.0.0.1:3000
-
-VOUS POUVEZ MODIFIER VOTRE ID ET MDP BEEF A LA LIGNE 59 ET 60
       
 			echo "cd /usr/share/beef-xss" >> /usr/bin/beef-xss
 			echo "./beef" >> /usr/bin/beef-xss
