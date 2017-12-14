@@ -1,22 +1,21 @@
 #=======================================================================#
 #                             IOA31000                                  #
-# Script  : beef_strike                             		        #
+# Script  : beef_strike                             						        #
 # Date    : 16/11/2017                                                  #
 # Author  : Tito                                                        #
 # Version : v0.1                                                        #
 # License : GNU General Public License v3.0                             #
 # Distrib : Kali-Linux 2017.2 amd64                                     #
-# Session : root  			      	               		#
-# Site Web: https://www.ioa31000.com	                	        #
+# Session : root  			      	               													#
+# Site Web: https://www.ioa31000.com	             					   	        #
 # YouTube : https://www.youtube.com/user/IOA32000/playlists             #
 # Discord : https://discordapp.com/invite/cyBjPjN                       #
 #                                                                       #
 #=======================================================================#
 
-
 # Caractéristiques
 
-Integration de beef strike pour armitage et msf 
+Integration de beef strike pour armitage et msf
 
 # Installation
 
@@ -25,9 +24,9 @@ DANS LE FICHIER /etc/beef-xss/config.yaml MODIFIER LA LIGNE 156 COMME CECI :
 
 	metasploit:
 	        enable: true
-		        
+
 Copier/Coller dans un terminal :
-		
+
 	sed -i 's/localhost/127.0.0.1/g' /usr/share/beef-xss/extensions/metasploit/config.yaml
 	sed -i 's/auto_msfrpcd: false/auto_msfrpcd: true/g' /usr/share/beef-xss/extensions/metasploit/config.yaml
 	apt update
@@ -42,7 +41,7 @@ Copier/Coller dans un terminal :
 	echo "cd /usr/share/beef-xss" >> /usr/bin/beef-xss
 	echo "./beef" >> /usr/bin/beef-xss
 	chmod +x /usr/bin/beef-xss
-			
+
 DANS LE FICHIER /root/beef_strike/beef_strike.cna MODIFIER LE PORT A LA LIGNE 58 COMME CECI :
 (VOUS POUVEZ MODIFIER VOTRE ID ET MDP BEEF A LA LIGNE 59 ET 60)
 
@@ -54,7 +53,7 @@ Copier/Coller dans un terminal :
 	mv -f /root/Desktop/redirect_beef/index.html /var/www/html
 	rm -rf /root/Desktop/redirect_beef
 	msfdb init
-			
+
 Ouvrez armitage
 
 Rendez-vous dans Armitage/script/load/beef_strike
