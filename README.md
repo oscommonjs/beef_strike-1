@@ -30,11 +30,10 @@ Copier/Coller dans un terminal :
 	sed -i 's/localhost/127.0.0.1/g' /usr/share/beef-xss/extensions/metasploit/config.yaml
 	sed -i 's/auto_msfrpcd: false/auto_msfrpcd: true/g' /usr/share/beef-xss/extensions/metasploit/config.yaml
 	apt update
-	git clone https://github.com/IOA31000/beef_strike.git /root/Bureau/beef_strike
-	mv -f /root/Bureau/beef_strike/beef /usr/share/metasploit-framework/lib
-	mv -f /root/Bureau/beef_strike/beef.rb /usr/share/metasploit-framework/plugins
-	mv -f /root/Bureau/beef_strike/index.html /var/www/html
-	mv -f /root/Bureau/beef_strike/ /root/
+	git clone https://github.com/IOA31000/beef_strike.git /root/beef_strike
+	mv -f /root/beef_strike/beef /usr/share/metasploit-framework/lib
+	mv -f /root/beef_strike/beef.rb /usr/share/metasploit-framework/plugins
+	mv -f /root/beef_strike/index.html /var/www/html
 	gem install hpricot json
 	cp -r /var/lib/gems/2.3.0/gems/hpricot-0.8.6/lib/* /usr/lib/ruby/vendor_ruby
 	rm -f /usr/bin/beef-xss
@@ -46,13 +45,6 @@ DANS LE FICHIER /root/beef_strike/beef_strike.cna MODIFIER LE PORT A LA LIGNE 58
 (VOUS POUVEZ MODIFIER VOTRE ID ET MDP BEEF A LA LIGNE 59 ET 60)
 
 	http://127.0.0.1:3000
-
-Copier/Coller dans un terminal :
-
-	git clone https://github.com/IOA31000/redirect_beef.git /root/Bureau/redirect_beef
-	mv -f /root/Bureau/redirect_beef/index.html /var/www/html
-	rm -rf /root/Bureau/redirect_beef
-	msfdb init
 
 Ouvrez armitage
 
